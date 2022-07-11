@@ -1,17 +1,20 @@
+import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { Layout } from './components/Layout'
-import Home from './pages/Home'
+import { AppRoutes } from './routes'
 import GlobalStyles from './styles/GlobalStyles'
 import { dark } from './styles/themes'
 
 function App() {
   return (
-    <ThemeProvider theme={dark}>
-      <Layout>
-        <GlobalStyles />
-        <Home />
-      </Layout>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={dark}>
+        <Layout>
+          <GlobalStyles />
+          <AppRoutes />
+        </Layout>
+      </ThemeProvider>
+    </BrowserRouter>
   )
 }
 
