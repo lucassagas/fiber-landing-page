@@ -14,7 +14,8 @@
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
-      "tsx": true
+      "tsx": true,
+      "ts": true
     },
     "ecmaVersion": "latest",
     "sourceType": "module"
@@ -35,6 +36,7 @@
     "no-duplicate-imports": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "@typescript-eslint/no-non-null-assertion": "off",
+    "import/prefer-default-export": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
