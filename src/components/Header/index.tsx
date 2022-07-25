@@ -1,9 +1,10 @@
+import { DesktopHeader } from './DesktopHeader'
 import { Container } from './styles'
 
 export function Header(): JSX.Element {
   return (
     <Container>
-      <h1>Header</h1>
+      <DesktopHeader />
     </Container>
   )
 }

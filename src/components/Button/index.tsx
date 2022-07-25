@@ -1,9 +1,15 @@
+import { ButtonHTMLAttributes } from 'react'
 import { Container } from './styles'
 
-export function Button(): JSX.Element {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  children: string
+  variation: 'primary' | 'secondary' | 'neutral'
+}
+
+export function Button({ children, type, variation, ...rest }: ButtonProps): JSX.Element {
   return (
-    <Container>
-      <button type='submit'>Button</button>
+    <Container variation={variation || 'neutral'} type={type || 'button'} {...rest}>
+      {children}
     </Container>
   )
 }
