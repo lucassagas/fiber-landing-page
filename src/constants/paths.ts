@@ -4,9 +4,9 @@ export const PATHS = {
     haveDropdown: true,
     dropdown: [
       { name: 'Fibra', link: '#fibra' },
-      { name: 'Intranet', link: '#fibra' },
-      { name: 'Logística', link: '#fibra' },
-      { name: 'Configurações', link: '#fibra' },
+      { name: 'Intranet', link: '#intranet' },
+      { name: 'Logística', link: '#logistica' },
+      { name: 'Configurações', link: '#configuracoes' },
     ],
   },
   'Quem Somos': {

@@ -19,7 +19,7 @@ const useEventListener: EventListenerHook = (eventType, handler, options) => {
 
   useEffect(() => {
     handlerRef.current = handler
-  })
+  }, [])
 
   useEffect(() => {
     if (!options.enabled) {

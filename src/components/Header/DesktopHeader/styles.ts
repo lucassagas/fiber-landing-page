@@ -22,4 +22,8 @@ export const Container = styled.div`
       list-style: none;
     }
   }
+
+  @media (max-width: 700px) {
+    display: none;
+  }
 `

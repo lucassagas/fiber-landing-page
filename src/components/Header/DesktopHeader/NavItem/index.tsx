@@ -1,5 +1,6 @@
 import { RiArrowDropDownLine } from 'react-icons/ri'
 import { useTheme } from 'styled-components'
+import { Dropdown } from '../Dropdown'
 import { Link } from './styles'
 
 type NavItemProps = {
@@ -7,15 +8,22 @@ type NavItemProps = {
   value: {
     haveDropdown: boolean
     link: string
+    dropdown?: Array<{
+      name: string
+      link: string
+    }>
   }
 }
 
 export function NavItem({ title, value }: NavItemProps) {
   const { white100 } = useTheme().colors
-  return (
-    <Link href={value.link}>
-      {title}
-      {value.haveDropdown && <RiArrowDropDownLine color={white100} size={24} />}
-    </Link>
+  return value.haveDropdown ? (
+    <Dropdown options={value.dropdown!}>
+      <Link>
+        {title} <RiArrowDropDownLine color={white100} size={24} />
+      </Link>
+    </Dropdown>
+  ) : (
+    <Link href={value.link}>{title}</Link>
   )
 }

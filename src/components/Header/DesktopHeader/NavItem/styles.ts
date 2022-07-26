@@ -7,4 +7,6 @@ export const Link = styled.a`
   display: flex;
   align-items: center;
   gap: 5px;
+
+  cursor: pointer;
 `

@@ -1,4 +1,4 @@
-import { DEFAULT_TRANSITION } from '../../constants'
+import { DEFAULT_TRANSITION } from '../../../../constants'
 
 export const DROP_DOWN_ANIMATION = {
   visible: {
