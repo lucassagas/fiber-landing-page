@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Container = styled.header`
   width: 100%;
-  padding: 0 20px;
 
   background: ${({ theme }) => theme.colors.gray900};
 
