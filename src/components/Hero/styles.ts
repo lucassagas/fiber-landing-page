@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-// import hero from '../../assets/hero.gif'
+import hero from '../../assets/hero.gif'
 
 export const Container = styled.div`
   width: 100%;
   height: 88vh;
 
-  /* background-image: url(${hero}); */
+  background-image: url(${hero});
   background-size: cover;
 
   position: relative;

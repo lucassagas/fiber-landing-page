@@ -1,1 +1,1 @@
-export { RiArrowDownLine, RiArrowDropDownLine, RiMenuLine } from 'react-icons/ri'
+export { RiArrowDownLine, RiArrowDropDownLine, RiInformationLine, RiMenuLine } from 'react-icons/ri'
