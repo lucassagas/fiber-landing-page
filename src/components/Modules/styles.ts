@@ -1,10 +1,11 @@
-import styled from 'styled-components'
+import { motion } from 'framer-motion'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
 `
 
 export const KnowTheModules = styled.div`
@@ -16,6 +17,19 @@ export const KnowTheModules = styled.div`
   > h1 {
     font-family: FuturaPTLight;
   }
+
+  > svg {
+    margin-top: 12px;
+  }
+
+  @media (max-width: 1000px) {
+    display: flex;
+    justify-content: center;
+
+    > h1 {
+      text-align: center;
+    }
+  }
 `
 
 export const Content = styled.div`
@@ -25,12 +39,35 @@ export const Content = styled.div`
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
+
+    margin-right: 4.375rem;
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+
+    > nav ul {
+      flex-direction: row;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 720px) {
+    > nav {
+      display: flex;
+      justify-content: center;
+
+      > ul {
+        margin-right: 0;
+      }
+    }
   }
 `
 
 type NavItemProps = {
   color: string
+  isActive: boolean
 }
 
 export const NavItem = styled.li<NavItemProps>`
@@ -58,6 +95,54 @@ export const NavItem = styled.li<NavItemProps>`
 
     &:hover:before {
       transform: translateX(0);
+    }
+
+    ${({ isActive }) =>
+      isActive &&
+      css`
+        :before {
+          transform: translateX(0);
+        }
+      `}
+  }
+`
+
+export const AnimateContainer = styled(motion.div)`
+  display: flex;
+  .mobile {
+    display: none;
+  }
+
+  > img {
+    margin-top: -90px;
+    margin-left: 100px;
+  }
+
+  @media (max-width: 1000px) {
+    > img {
+      width: 350px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+    }
+
+    > img {
+      margin: 60px auto 60px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    > img {
+      width: 300px;
     }
   }
 `
