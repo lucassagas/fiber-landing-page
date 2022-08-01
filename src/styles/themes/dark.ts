@@ -8,6 +8,7 @@ export default {
     gray800: '#303030',
     gray700: '#3B3B3B',
     gray500: '#606060',
+    gray100: 'rgba(242, 242, 242, 1)',
     white100: '#FFFFFF',
     orange900: 'rgba(255, 140, 0, 1)',
   },
