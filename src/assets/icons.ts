@@ -4,4 +4,6 @@ export {
   RiArrowRightUpLine,
   RiInformationLine,
   RiMenuLine,
+  RiQuestionAnswerLine,
+  RiRoadMapLine,
 } from 'react-icons/ri'
