@@ -1,4 +1,5 @@
 import { App } from '../../components/App'
+import { ContactUs } from '../../components/ContactUs'
 import { Customers } from '../../components/Customers'
 import { HasInThreeSoft } from '../../components/HasInThreeSoft'
 import { Hero } from '../../components/Hero'
@@ -13,6 +14,7 @@ function Home() {
       <Modules />
       <HasInThreeSoft />
       <App />
+      <ContactUs />
     </Container>
   )
 }
