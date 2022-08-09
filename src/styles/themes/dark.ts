@@ -11,5 +11,6 @@ export default {
     gray100: 'rgba(242, 242, 242, 1)',
     white100: '#FFFFFF',
     orange900: 'rgba(255, 140, 0, 1)',
+    black900: '#000000',
   },
 }

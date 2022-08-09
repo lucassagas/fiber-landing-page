@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
+import { Footer } from '../Footer'
 import { Header } from '../Header'
+import { SocialMediaBar } from '../SocialMediaBar'
 import { Container } from './styles'
 
 type LayoutProps = {
@@ -11,6 +13,8 @@ export function Layout({ children }: LayoutProps): JSX.Element {
     <Container>
       <Header />
       {children}
+      <SocialMediaBar />
+      <Footer />
     </Container>
   )
 }
