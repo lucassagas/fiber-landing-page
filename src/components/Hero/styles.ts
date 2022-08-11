@@ -1,11 +1,9 @@
 import styled from 'styled-components'
-import hero from '../../assets/hero.gif'
 
 export const Container = styled.div`
   width: 100%;
   height: 88vh;
 
-  background-image: url(${hero});
   background-size: cover;
 
   position: relative;
@@ -88,41 +86,5 @@ export const Wrapper = styled.div`
     > div button {
       display: none;
     }
-  }
-`
-
-export const GradientOne = styled.div`
-  width: 100%;
-  height: 88vh;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 20;
-
-  background: linear-gradient(90deg, #212121 0%, rgba(33, 33, 33, 0) 91.87%);
-
-  @media (min-width: 1700px) {
-    height: 90vh;
-  }
-`
-
-export const GradientTwo = styled.div`
-  width: 100%;
-  height: 88vh;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-
-  background: linear-gradient(
-    294.05deg,
-    rgba(33, 33, 33, 0.55) -17.17%,
-    rgba(33, 33, 33, 0) 35.69%
-  );
-
-  @media (min-width: 1700px) {
-    height: 90vh;
   }
 `
