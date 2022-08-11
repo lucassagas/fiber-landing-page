@@ -10,7 +10,7 @@ export const PATHS = {
     ],
   },
   'Quem Somos': {
-    link: '#whoweare',
+    link: '/about',
     haveDropdown: false,
   },
   'Fale Conosco': {
