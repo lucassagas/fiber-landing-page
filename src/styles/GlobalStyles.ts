@@ -34,6 +34,8 @@ export default createGlobalStyle`
 }
 
 html {
+  scroll-behavior: smooth;
+
   @media(max-width: 1080px) {
     font-size: 93.75%;
   }
@@ -53,6 +55,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 
+  scroll-behavior: smooth;
 }
 
 body, input, textarea, button {
