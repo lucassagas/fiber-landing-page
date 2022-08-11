@@ -5,6 +5,7 @@ import { RiInformationLine } from '../../assets/icons'
 import ConfigurationScreen from '../../assets/modules/configuration.svg'
 import FiberScreen from '../../assets/modules/fiber.svg'
 import LogisticsScreen from '../../assets/modules/logistic.svg'
+import { useModules } from '../../hooks/useModules'
 import { Description } from './Description'
 import { AnimateContainer, Container, Content, KnowTheModules, NavItem } from './styles'
 
@@ -17,6 +18,7 @@ export type SelectedModuleProps = {
 }
 
 export function Modules(): JSX.Element {
+  const { selectedModule: selectedModuleByDropdown } = useModules()
   const { white100, purple900, blue500, orange900, gray500 } = useTheme().colors
   const [selectedModule, setSelectedModule] = useState<SelectedModuleProps>()
   const [isVisible, setIsVisible] = useState(true)
@@ -73,8 +75,9 @@ export function Modules(): JSX.Element {
   ]
 
   useEffect(() => {
-    setSelectedModule(modules[0])
-  }, [])
+    const moduleByDropdown = modules.find((module) => module.module === selectedModuleByDropdown)
+    setSelectedModule(moduleByDropdown || modules[0])
+  }, [selectedModuleByDropdown])
 
   const handleSelectModule = useCallback((module: SelectedModuleProps): void => {
     setSelectedModule(module)
@@ -83,7 +86,7 @@ export function Modules(): JSX.Element {
   }, [])
 
   return (
-    <Container>
+    <Container id='modules'>
       <KnowTheModules>
         <h1>
           Conheça os módulos

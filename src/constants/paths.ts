@@ -3,10 +3,10 @@ export const PATHS = {
     link: '#modules',
     haveDropdown: true,
     dropdown: [
-      { name: 'Fibra', link: '#fibra' },
-      { name: 'Intranet', link: '#intranet' },
-      { name: 'Logística', link: '#logistica' },
-      { name: 'Configurações', link: '#configuracoes' },
+      { name: 'Fibra', link: '#modules' },
+      { name: 'Intranet', link: '#modules' },
+      { name: 'Logística', link: '#modules' },
+      { name: 'Configurações', link: '#modules' },
     ],
   },
   'Quem Somos': {

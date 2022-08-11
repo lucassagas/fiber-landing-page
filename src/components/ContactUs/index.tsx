@@ -33,7 +33,7 @@ export function ContactUs(): JSX.Element {
   }, [])
 
   return (
-    <Container>
+    <Container id='contactus'>
       <Img />
       <div>
         <Wrapper onSubmit={handleSubmit}>
