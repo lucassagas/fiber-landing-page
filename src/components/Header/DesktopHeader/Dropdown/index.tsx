@@ -1,6 +1,7 @@
 import { AnimatePresence } from 'framer-motion'
 import { ReactNode, useCallback, useRef, useState } from 'react'
 import useEventListener from '../../../../hooks/useEventListener'
+import { useModules } from '../../../../hooks/useModules'
 import { DROP_DOWN_ANIMATION } from './animation'
 import { AnimatedDropdown, Container, NavButton } from './styles'
 
@@ -14,6 +15,7 @@ type DropdownProps = {
 
 export function Dropdown({ children, options = [] }: DropdownProps): JSX.Element {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false)
+  const { setSelectedModule } = useModules()
 
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -31,6 +33,10 @@ export function Dropdown({ children, options = [] }: DropdownProps): JSX.Element
     enabled: isDropdownVisible,
   })
 
+  const handleSelectModule = useCallback((name: string) => {
+    setSelectedModule(name)
+  }, [])
+
   return (
     <Container ref={dropdownRef} onClick={handleDropdownVisibility}>
       {children}
@@ -44,7 +50,11 @@ export function Dropdown({ children, options = [] }: DropdownProps): JSX.Element
           >
             <ul>
               {options?.map((option) => (
-                <NavButton href={option.link} key={option.name}>
+                <NavButton
+                  onClick={() => handleSelectModule(option.name!)}
+                  href={option.link}
+                  key={option.name}
+                >
                   {option.name}
                 </NavButton>
               ))}

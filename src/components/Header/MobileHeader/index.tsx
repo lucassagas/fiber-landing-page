@@ -24,7 +24,7 @@ export function MobileHeader(): JSX.Element {
         <ul>
           {Object.entries(PATHS).map(([key, value]) => (
             <li key={key}>
-              <NavItem title={key} value={value} />
+              <NavItem title={key} value={value} setOpenMenu={setOpenMenu} />
             </li>
           ))}
         </ul>
