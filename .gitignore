@@ -22,3 +22,5 @@ src/assets/hero.gif
 *.njsproj
 *.sln
 *.sw?
+
+.vercel

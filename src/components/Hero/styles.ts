@@ -5,6 +5,7 @@ export const Container = styled.div`
   height: 88vh;
 
   background-size: cover;
+  overflow-x: hidden;
 
   position: relative;
 
