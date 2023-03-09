@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 88vh;
 
   background-size: cover;
-  overflow-x: hidden;
+  overflow: hidden;
 
   position: relative;
 
@@ -15,6 +15,10 @@ export const Container = styled.div`
 
   @media (min-width: 1700px) {
     height: 90vh;
+
+    > video {
+      width: 100%;
+    }
   }
 
   @media (max-width: 769px) {
@@ -31,6 +35,10 @@ export const Container = styled.div`
       bottom: 0;
       width: 100%;
       z-index: 20;
+    }
+
+    > video {
+      margin-left: -80%;
     }
   }
 `
