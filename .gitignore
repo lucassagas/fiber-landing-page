@@ -24,3 +24,6 @@ src/assets/hero.gif
 *.sw?
 
 .vercel
+
+# Local Netlify folder
+.netlify

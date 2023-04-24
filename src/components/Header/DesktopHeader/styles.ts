@@ -28,3 +28,18 @@ export const Container = styled.div`
     display: none;
   }
 `
+
+export const StyledLink = styled.a`
+  min-width: 200px;
+  padding: 10px;
+  background: none;
+  border: solid 1px ${({ theme }) => theme.colors.white100};
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.white100};
+`

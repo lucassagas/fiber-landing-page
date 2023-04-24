@@ -4,7 +4,6 @@ import { useTheme } from 'styled-components'
 import { RiInformationLine } from '../../assets/icons'
 import ConfigurationScreen from '../../assets/modules/configuration.svg'
 import FiberScreen from '../../assets/modules/fiber.svg'
-import LogisticsScreen from '../../assets/modules/logistic.svg'
 import { useModules } from '../../hooks/useModules'
 import { Description } from './Description'
 import { AnimateContainer, Container, Content, KnowTheModules, NavItem } from './styles'
@@ -19,7 +18,7 @@ export type SelectedModuleProps = {
 
 export function Modules(): JSX.Element {
   const { selectedModule: selectedModuleByDropdown } = useModules()
-  const { white100, purple900, blue500, orange900, gray500 } = useTheme().colors
+  const { white100, purple900, gray500 } = useTheme().colors
   const [selectedModule, setSelectedModule] = useState<SelectedModuleProps>()
   const [isVisible, setIsVisible] = useState(true)
 
@@ -32,30 +31,6 @@ export function Modules(): JSX.Element {
       description: [
         'Integração com os principais players do mercado de OLT.',
         'Mapa com toda rede, CTO, CEO, cabos e muito mais.',
-        'Chat interno e atendimento para liberação técnica.',
-        'Aplicativo para Técnicos.',
-      ],
-    },
-    {
-      module: 'Logística',
-      color: orange900,
-      image: LogisticsScreen,
-      slug: 'Tenha toda a logística em apenas um lugar.',
-      description: [
-        'Visualização de OS em mapa para melhor gerenciamento de rota.',
-        'Chat interno para tratativa com técnico.',
-        'Controle por status para melhor tratativa de OS.',
-        'Controle de rota para técnicos.',
-      ],
-    },
-    {
-      module: 'Intranet',
-      color: blue500,
-      image: FiberScreen,
-      slug: 'Gerencie processos internos de diferentes setores.',
-      description: [
-        'Gerencia de estoque.',
-        'Aqui vai outro texto dizendo uma função especifica do fiber three.',
         'Chat interno e atendimento para liberação técnica.',
         'Aplicativo para Técnicos.',
       ],

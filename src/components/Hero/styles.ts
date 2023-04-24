@@ -9,7 +9,7 @@ export const Container = styled.div`
 
   position: relative;
 
-  > button {
+  > a {
     display: none;
   }
 
@@ -27,9 +27,9 @@ export const Container = styled.div`
 
   @media (max-width: 400px) {
     margin-top: -30px;
-    > button {
+    > a {
       font-weight: 600;
-      display: block;
+      display: flex;
       position: absolute;
       padding: 20px 0;
       bottom: 0;
@@ -96,4 +96,19 @@ export const Wrapper = styled.div`
       display: none;
     }
   }
+`
+export const StyledLink = styled.a`
+  background: ${({ theme }) => theme.colors.white100};
+  border: none;
+  color: ${({ theme }) => theme.colors.gray900};
+  min-width: 200px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: -6px;
+
+  text-decoration: none;
 `

@@ -1,4 +1,6 @@
 import { FormEvent, useCallback, useState } from 'react'
+import { gql, useMutation } from '@apollo/client'
+import { toast } from 'react-toastify'
 import { Button } from '../Button'
 import { Input } from '../Input'
 import { Container, Img, Wrapper } from './styles'
@@ -7,21 +9,53 @@ type FormProps = {
   name: string
   email: string
   company: string
-  office: string
+  position: string
 }
+
+const ADD_CONTACT = gql`
+  mutation CreateContact($name: String!, $email: String!, $company: String!, $position: String!) {
+    createContact(data: { name: $name, email: $email, company: $company, position: $position }) {
+      id
+      createdAt
+      name
+      email
+      company
+      position
+    }
+  }
+`
 
 export function ContactUs(): JSX.Element {
   const [formData, setFormData] = useState<FormProps>({
     name: '',
     email: '',
     company: '',
-    office: '',
+    position: '',
+  })
+
+  const [createContact] = useMutation(ADD_CONTACT, {
+    variables: {
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      position: formData.position,
+    },
   })
 
   const handleSubmit = useCallback(
     async (event: FormEvent): Promise<void> => {
       event.preventDefault()
-      console.log(formData)
+      createContact()
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        position: '',
+      })
+
+      toast('Enviado com sucesso', {
+        type: 'success',
+      })
     },
     [formData],
   )
@@ -43,10 +77,33 @@ export function ContactUs(): JSX.Element {
           </p>
 
           <section>
-            <Input label='Nome' name='name' onChange={handleChange} />
-            <Input label='E-mail' name='email' onChange={handleChange} />
-            <Input label='Empresa' name='company' onChange={handleChange} />
-            <Input label='Cargo' name='office' onChange={handleChange} />
+            <Input
+              label='Nome'
+              name='name'
+              onChange={handleChange}
+              value={formData.name}
+              required
+            />
+            <Input
+              label='E-mail'
+              name='email'
+              onChange={handleChange}
+              value={formData.email}
+              type='email'
+              required
+            />
+            <Input
+              label='Empresa'
+              name='company'
+              onChange={handleChange}
+              value={formData.company}
+            />
+            <Input
+              label='Cargo'
+              name='position'
+              onChange={handleChange}
+              value={formData.position}
+            />
 
             <Button type='submit' variation='primary'>
               Enviar

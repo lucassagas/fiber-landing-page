@@ -23,7 +23,7 @@ export function Card({ cards }: CardProps): JSX.Element {
             <p>{card.description}</p>
           </div>
 
-          <a href='#'>
+          <a href='/#contactus'>
             Fale conosco <RiArrowRightUpLine size={15} color={gray900} />
           </a>
         </Container>
@@ -40,7 +40,7 @@ export function Card({ cards }: CardProps): JSX.Element {
             </p>
           </div>
 
-          <a href='#'>
+          <a href='/#contactus'>
             Fale conosco <RiArrowRightUpLine size={15} color={gray900} />
           </a>
         </Wrapper>

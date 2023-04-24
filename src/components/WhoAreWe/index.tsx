@@ -18,23 +18,18 @@ export function WhoAreWe(): JSX.Element {
           alt=' imagem de um jovem segurando um celular em frente ao notebook com o sistema Three soft aberto'
         />
         <p>
-          A Three Software é uma empresa totalmente focada em estudos e análises, afim de estar
-          sempre atualizada com as tendências de gestão de empresas para soluções que agilizem o
-          trabalho de seus clientes.
+          Prezamos por qualidade e velocidade, cada tela do nosso sistema é pensada em otimização
+          dos processos, acelerando o fluxo de trabalho.
         </p>
       </div>
 
       <section>
         <p>
-          A Three Software é uma empresa que fica localizada em Biguaçu/SC na Grande Florianóplis,
-          onde se encontra os principais centros de tecnologia de software onde respiramos as
-          melhores tendências e soluções do mercado para implementação.
+          A Three Software é uma empresa que fica localizada em Biguaçu/SC na Grande Florianópolis,
+          onde se encontra os principais centros de tecnologia de software, respiramos as melhores
+          tendências e soluções do mercado para implementação.
         </p>
         <img src={mapAbout} alt='foto de uma mapa com as CTO marcadas no mapa' />
-        <p>
-          Hoje possui 3 colaboradores, com talentos diversificados e totalmente focados, utilizando
-          das melhores tecnologias, equipamentos e softwares para promover produção com qualidade.
-        </p>
       </section>
     </Container>
   )

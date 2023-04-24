@@ -17,7 +17,7 @@ export function Description({ selectedModule }: descriptionProps): JSX.Element {
           <li key={description}>{description}</li>
         ))}
       </Wrapper>
-      <Link href='' color={selectedModule?.color}>
+      <Link href='/#contactus' color={selectedModule?.color}>
         Fale conosco <RiArrowRightUpLine size={18} color={white100} />
       </Link>
     </Container>

@@ -11,8 +11,6 @@ export function Footer(): JSX.Element {
           <section>
             <strong>Módulos</strong>
             <a href='#'>Fibra</a>
-            <a href='#'>Logística</a>
-            <a href='#'>Intranet</a>
             <a href='#'>Configurações</a>
           </section>
           <section>

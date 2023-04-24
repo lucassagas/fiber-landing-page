@@ -1,8 +1,7 @@
 import logo from '../../../assets/logo.svg'
 import { PATHS } from '../../../constants'
-import { Button } from '../../Button'
 import { NavItem } from './NavItem'
-import { Container } from './styles'
+import { Container, StyledLink } from './styles'
 
 export function DesktopHeader(): JSX.Element {
   return (
@@ -16,7 +15,7 @@ export function DesktopHeader(): JSX.Element {
             </li>
           ))}
         </ul>
-        <Button variation='neutral'>Solicitar demonstração</Button>
+        <StyledLink href='/#contactus'>Solicitar demonstração</StyledLink>
       </nav>
     </Container>
   )

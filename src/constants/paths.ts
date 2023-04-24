@@ -3,10 +3,8 @@ export const PATHS = {
     link: '#modules',
     haveDropdown: true,
     dropdown: [
-      { name: 'Fibra', link: '#modules' },
-      { name: 'Intranet', link: '#modules' },
-      { name: 'Logística', link: '#modules' },
-      { name: 'Configurações', link: '#modules' },
+      { name: 'Fibra', link: '/#modules' },
+      { name: 'Configurações', link: '/#modules' },
     ],
   },
   'Quem Somos': {
@@ -15,6 +13,6 @@ export const PATHS = {
   },
   'Fale Conosco': {
     haveDropdown: false,
-    link: '#contactus',
+    link: '/#contactus',
   },
 }
