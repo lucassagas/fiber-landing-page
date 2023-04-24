@@ -25,6 +25,10 @@ export const Content = styled.div`
   > span {
     display: flex;
     gap: 1.875rem;
+
+    > svg {
+      cursor: pointer;
+    }
   }
 
   @media (max-width: 430px) {
