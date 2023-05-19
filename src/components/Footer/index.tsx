@@ -24,7 +24,7 @@ export function Footer(): JSX.Element {
         </Wrapper>
         <section>
           <span>© 2021 Three Soft - Todos os Direitos Reservados</span>
-          <span>CNPJ 912841204810710</span>
+          <span>CNPJ 42.675.706/0001-01</span>
         </section>
       </Content>
     </Container>
